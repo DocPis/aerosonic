@@ -149,18 +149,18 @@
         document.getElementById("vite-legacy-entry").getAttribute("data-src")
       );
     </script>
-  </body>
-  <script>
-    /* Attiva con: ?ui=new  |  Disattiva con: ?ui=old
+    <script>
+      /* Attiva con: ?ui=new  |  Disattiva con: ?ui=old
    Oppure persistente: localStorage.setItem('aero_ui','new') */
-    (function () {
-      var params = new URLSearchParams(location.search);
-      var q = params.get("ui");
-      if (q === "new") localStorage.setItem("aero_ui", "new");
-      if (q === "old") localStorage.removeItem("aero_ui");
+      (function () {
+        var params = new URLSearchParams(location.search);
+        var q = params.get("ui");
+        if (q === "new") localStorage.setItem("aero_ui", "new");
+        if (q === "old") localStorage.removeItem("aero_ui");
 
-      var enable = localStorage.getItem("aero_ui") === "new";
-      if (enable) document.documentElement.classList.add("aero-newui"); // usa <html> o <body>, coerente con il CSS
-    })();
-  </script>
+        var enable = localStorage.getItem("aero_ui") === "new";
+        if (enable) document.documentElement.classList.add("aero-newui"); // usa <html> o <body>, coerente con il CSS
+      })();
+    </script>
+  </body>
 </html>
