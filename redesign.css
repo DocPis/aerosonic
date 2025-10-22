@@ -650,6 +650,28 @@ body.aero-newui .button.ghost {
   color: #eaf2ff !important;
   border: 1px solid rgba(255, 255, 255, 0.14) !important;
 }
+/* Migliora contrasto testo/bottone */
+body.aero-newui .btn,
+body.aero-newui .button,
+body.aero-newui button,
+body.aero-newui a.button {
+  /* background già definito come gradiente #26a0ff → #7ee0ff */
+  /* Per migliorare contrasto testo: */
+  color: #ffffff !important; /* testo bianco pieno */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important; /* leggero bordo scuro per rendere il testo più leggibile */
+}
+
+/* Assicurati che lo sfondo sia sufficientemente scuro */
+body.aero-newui .btn,
+body.aero-newui .button,
+body.aero-newui button,
+body.aero-newui a.button {
+  background: linear-gradient(
+    90deg,
+    #1a80d9,
+    #4db8ff
+  ) !important; /* version più scura del gradiente originale */
+}
 
 /* ---- G. Inputs / Form accessibili ---- */
 body.aero-newui input,
