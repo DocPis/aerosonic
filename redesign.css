@@ -529,11 +529,15 @@ body.aero-newui .card {
 
 /* ---- A. Base + sfondo (vince su bundle) ---- */
 html body.aero-newui {
-  background:
-    radial-gradient(1200px 600px at 70% -10%, rgba(38,160,255,.24), transparent 55%),
+  background: radial-gradient(
+      1200px 600px at 70% -10%,
+      rgba(38, 160, 255, 0.24),
+      transparent 55%
+    ),
     linear-gradient(180deg, #060b1a, #0b1530) !important;
   color: #eaf2ff !important;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial !important;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial !important;
 }
 
 /* Neutralizza wrapper chiari che coprono lo sfondo dark */
@@ -556,19 +560,22 @@ body.aero-newui [class*=" bg-"] {
 body.aero-newui header,
 body.aero-newui .site-header,
 body.aero-newui nav {
-  background: rgba(6,14,40,.35) !important;
+  background: rgba(6, 14, 40, 0.35) !important;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255,255,255,.06) !important;
-  box-shadow: 0 10px 30px rgba(6,14,40,.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+  box-shadow: 0 10px 30px rgba(6, 14, 40, 0.2);
 }
 
 /* ---- C. Hero/section “pro” senza toccare layout ---- */
 body.aero-newui .hero,
 body.aero-newui .section-hero,
 body.aero-newui main > section:first-child {
-  background:
-    radial-gradient(900px 320px at 60% -15%, rgba(126,224,255,.18), transparent 60%);
+  background: radial-gradient(
+    900px 320px at 60% -15%,
+    rgba(126, 224, 255, 0.18),
+    transparent 60%
+  );
 }
 
 /* ---- D. Card glass + hover soft ---- */
@@ -578,13 +585,182 @@ body.aero-newui .box,
 body.aero-newui .widget,
 body.aero-newui .market-card,
 body.aero-newui .token-card {
-  background: rgba(255,255,255,.05) !important;
-  border: 1px solid rgba(255,255,255,.08) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
   border-radius: 16px !important;
-  box-shadow: 0 12px 40px rgba(6,14,40,.45) !important;
+  box-shadow: 0 12px 40px rgba(6, 14, 40, 0.45) !important;
 }
 body.aero-newui .card:hover,
 body.aero-newui .panel:hover,
 body.aero-newui .box:hover,
-body.aero-ne
+body.aero-newui .widget:hover {
+  box-shadow: 0 16px 46px rgba(38, 160, 255, 0.18) !important;
+}
 
+/* ---- E. Tipografia & colori secondari ---- */
+body.aero-newui h1,
+body.aero-newui h2,
+body.aero-newui h3 {
+  letter-spacing: 0.2px;
+  line-height: 1.22;
+}
+body.aero-newui h1 {
+  font-weight: 800;
+}
+body.aero-newui h2 {
+  font-weight: 700;
+}
+body.aero-newui h3 {
+  font-weight: 650;
+}
+body.aero-newui p {
+  color: #a7b8d6;
+}
+body.aero-newui .muted {
+  color: #a7b8d6;
+}
+body.aero-newui .subtle {
+  color: #7b8dac;
+}
+
+/* ---- F. CTA / Buttons (gradiente moderno) ---- */
+body.aero-newui .btn,
+body.aero-newui .button,
+body.aero-newui button,
+body.aero-newui a.button {
+  background: linear-gradient(90deg, #26a0ff, #7ee0ff) !important;
+  color: #041022 !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  padding: 0.65rem 1.1rem !important;
+  font-weight: 700 !important;
+  box-shadow: 0 10px 24px rgba(38, 160, 255, 0.24) !important;
+  transition: transform 0.12s ease, box-shadow 0.12s ease !important;
+}
+body.aero-newui .btn:hover,
+body.aero-newui .button:hover,
+body.aero-newui button:hover,
+body.aero-newui a.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 36px rgba(38, 160, 255, 0.3) !important;
+}
+body.aero-newui .btn.ghost,
+body.aero-newui .button.ghost {
+  background: transparent !important;
+  color: #eaf2ff !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+}
+
+/* ---- G. Inputs / Form accessibili ---- */
+body.aero-newui input,
+body.aero-newui select,
+body.aero-newui textarea {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: #eaf2ff !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+  padding: 0.7rem 0.9rem !important;
+  outline: none !important;
+  transition: border-color 0.12s ease, box-shadow 0.12s ease !important;
+}
+body.aero-newui input::placeholder,
+body.aero-newui textarea::placeholder {
+  color: #7b8dac !important;
+}
+body.aero-newui input:focus,
+body.aero-newui select:focus,
+body.aero-newui textarea:focus {
+  border-color: #7ee0ff !important;
+  box-shadow: 0 0 0 3px rgba(126, 224, 255, 0.28) !important;
+}
+
+/* ---- H. Tabelle pulite ---- */
+body.aero-newui thead th {
+  color: #7b8dac !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  font-weight: 650 !important;
+}
+body.aero-newui tbody td {
+  color: #eaf2ff !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+body.aero-newui tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03) !important;
+}
+
+/* ---- I. Badge / Pills ---- */
+body.aero-newui .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: #eaf2ff !important;
+}
+body.aero-newui .badge.success {
+  border-color: rgba(34, 197, 94, 0.35) !important;
+  color: #22c55e !important;
+}
+body.aero-newui .badge.warn {
+  border-color: rgba(245, 158, 11, 0.35) !important;
+  color: #f59e0b !important;
+}
+body.aero-newui .badge.danger {
+  border-color: rgba(239, 68, 68, 0.35) !important;
+  color: #ef4444 !important;
+}
+
+/* ---- J. Modals (non attiviamo overlay di default) ---- */
+body.aero-newui .modal-backdrop {
+  background: rgba(2, 6, 23, 0.55) !important;
+}
+body.aero-newui .modal-content {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 24px 60px rgba(2, 6, 23, 0.55) !important;
+}
+
+/* ---- K. Footer sobrio ---- */
+body.aero-newui footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #7b8dac !important;
+}
+
+/* ---- L. Trend up/down per prezzi ---- */
+body.aero-newui .up {
+  color: #22c55e !important;
+}
+body.aero-newui .down {
+  color: #ef4444 !important;
+}
+
+/* ---- M. Focus visibile / A11y ---- */
+body.aero-newui :focus-visible {
+  outline: 3px solid rgba(126, 224, 255, 0.45) !important;
+  outline-offset: 2px !important;
+  border-radius: 6px !important;
+}
+
+/* ---- N. WalletConnect (wcm) in dark matching ---- */
+body.aero-newui {
+  --wcm-color-fg-1: #eaf2ff;
+  --wcm-color-fg-2: #a7b8d6;
+  --wcm-color-fg-3: #7b8dac;
+  --wcm-color-bg-1: #0b1530;
+  --wcm-color-bg-2: #0e1b3d;
+  --wcm-color-bg-3: #13224f;
+  --wcm-color-overlay: rgba(2, 6, 23, 0.6);
+  --wcm-accent-color: #26a0ff;
+  --wcm-accent-fill-color: #041022;
+}
+
+/* ---- O. Motion reduce safe ---- */
+@media (prefers-reduced-motion: reduce) {
+  body.aero-newui * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
